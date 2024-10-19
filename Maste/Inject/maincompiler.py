@@ -37,13 +37,6 @@ asciiart = """
 
 
 
-def read(filename):
-    with open(filename, 'r') as lua_file:
-        lua_script = lua_file.read()
-
-
-
-script = read("gui.luau")
     
 async def compilebricks():
     if is_process_running("RobloxPlayerBeta.exe"):
