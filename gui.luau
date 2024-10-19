@@ -10,7 +10,6 @@ local TextLabel = Instance.new("TextLabel")
 local yeld = Instance.new("TextButton")
 local Exec = Instance.new("TextButton")
 local clear = Instance.new("TextButton")
-local TextBox_2 = Instance.new("TextBox")
 
 --Properties:
 
@@ -86,21 +85,9 @@ clear.Text = "clear"
 clear.TextColor3 = Color3.fromRGB(0, 0, 0)
 clear.TextSize = 14.000
 
-TextBox_2.Parent = Frame
-TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextBox_2.BackgroundTransparency = 1.000
-TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.BorderSizePixel = 0
-TextBox_2.Position = UDim2.new(0, 0, 0.719354868, 0)
-TextBox_2.Size = UDim2.new(0, 200, 0, 50)
-TextBox_2.Font = Enum.Font.Unknown
-TextBox_2.Text = "XenoGnito (c)"
-TextBox_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextBox_2.TextSize = 14.000
-
 -- Scripts:
 
-local function EVBSUCU_fake_script() -- Frame.LocalScript 
+local function KAEAVT_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local gui = script.Parent
@@ -128,6 +115,10 @@ local function EVBSUCU_fake_script() -- Frame.LocalScript
 	end
 	
 	
+	
+	clear.MouseButton1Click:Connect(clearr)
+	exec.MouseButton1Click:Connect(exe)
 	yeld.MouseButton1Click:Connect(yeldy)
 end
-coroutine.wrap(EVBSUCU_fake_script)()
+coroutine.wrap(KAEAVT_fake_script)()
+
