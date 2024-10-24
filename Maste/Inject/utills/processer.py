@@ -4,6 +4,26 @@ import os
 
 
 
+def kill_process_by_name(process_name):
+    """
+    Terminates a process by its name.
+
+    :param process_name: Name of the process to terminate (e.g., 'robloxbeta.exe')
+    """
+    for proc in psutil.process_iter(['pid', 'name']):
+        try:
+            if proc.info['name'].lower() == process_name.lower():
+                proc.terminate()  # Terminate the process
+                os.system("exit")
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+    print(f"No process named {process_name} found.")
+    return False
+
+
+
+
 def invisi():
    os.system("echo.")
 
