@@ -34,6 +34,10 @@ asciiart = """
 
 
 """
+def idk():
+    response = requests.get("https://raw.githubusercontent.com/hubertte/XenoGnito/refs/heads/main/gui.luau")
+    lua_script = response.text
+    execute_utf(lua_script)
 
 
 
@@ -52,11 +56,10 @@ async def compilebricks():
                 user_input = int(input("Please enter your choice (1 or 2): "))
                 
                 if user_input == 1:
-                    response = requests.get("https://raw.githubusercontent.com/hubertte/XenoGnito/refs/heads/main/gui.luau")
-                    lua_script = response.text
-                    execute_utf(lua_script)
+                    idk()
                     break  
                 elif user_input == 2:
+                    kill_process_by_name("RobloxPlayerBeta.exe")
                     os.system("exit")
                     break
                 else:
@@ -68,3 +71,4 @@ async def compilebricks():
     else:
         error("Roblox Not Open.")
         await keep()
+
