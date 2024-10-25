@@ -1,10 +1,4 @@
---[[
 
-		Gui2Lua™
-		10zOfficial
-		Version 1.0.0
-
-]]
 
 
 -- Instances
