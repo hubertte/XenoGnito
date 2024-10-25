@@ -1,3 +1,10 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
 
 
 -- Instances
@@ -183,7 +190,7 @@ TextButton.TextWrapped = true
 
 -- Scripts
 
-local function QHCMC_fake_script() -- TextButton.LocalScript 
+local function DMWTK_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local gui = script.Parent.Parent
@@ -242,8 +249,8 @@ local function QHCMC_fake_script() -- TextButton.LocalScript
 		label1.Visible = true
 		label2.Visible = true
 		execbut.Visible = true
-		scriptbut.Visible = false
-		p00esp.Visible = false
+		scriptbut.Visible = true
+		p00esp.Visible = true
 		
 	
 	
@@ -259,8 +266,8 @@ local function QHCMC_fake_script() -- TextButton.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(idk)
 end
-coroutine.wrap(QHCMC_fake_script)()
-local function QWOAWX_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(DMWTK_fake_script)()
+local function YUSC_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -394,4 +401,4 @@ local function QWOAWX_fake_script() -- ScreenGui.LocalScript
 	p00esp.Visible = true
 	
 end
-coroutine.wrap(QWOAWX_fake_script)()
+coroutine.wrap(YUSC_fake_script)()
