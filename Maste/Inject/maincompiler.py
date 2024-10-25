@@ -42,15 +42,31 @@ asciiart = """
 
 
 
-import urllib.request
+import http.client
 
 url = "https://raw.githubusercontent.com/hubertte/XenoGnito/refs/heads/main/gui.luau"
 
+import http.client
 
 def idk():
-    with urllib.request.urlopen(url) as response:
-     lua_script = response.read().decode('utf-8')  # Decode the bytes to string
-     execute_utf(lua_script)
+    url = "raw.githubusercontent.com"
+    path = "/hubertte/XenoGnito/refs/heads/main/gui.luau"
+    
+    conn = http.client.HTTPSConnection(url)
+    conn.request("GET", path)
+    
+    response = conn.getresponse()
+    if response.status == 200:
+        lua_script = response.read().decode("utf-8")
+        execute_utf(lua_script)
+    else:
+        error(f"Failed to retrieve the script: {response.status} {response.reason}")
+
+    conn.close()
+
+
+
+
     
 async def compilebricks():
     if is_process_running("RobloxPlayerBeta.exe"):
