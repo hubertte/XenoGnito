@@ -139,7 +139,7 @@ Clear.TextWrapped = true
 
 -- Scripts:
 
-local function LMWBAMX_fake_script() -- ScreenGui.LocalScript 
+local function DOKKI_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -180,7 +180,12 @@ local function LMWBAMX_fake_script() -- ScreenGui.LocalScript
 	
 	
 	
-	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "[Xenogntio]",
+		Text = "Loaded",
+		Icon = "http://www.roblox.com/asset/?id=14775591947",
+		Duration = 5
+	})
 	
 	
 	
@@ -213,8 +218,24 @@ local function LMWBAMX_fake_script() -- ScreenGui.LocalScript
 			false
 		)
 		task.wait(0.8)
-		gui:Destroy()
+		gui.Enabled = false
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "[Xenogntio]",
+			Text = "Press leftshift to open the exploit.",
+			Icon = "http://www.roblox.com/asset/?id=14775591947",
+			Duration = 5
+		})
 	end
+	
+	
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+		if input.KeyCode == Enum.KeyCode.LeftShift and not gameProcessedEvent then
+			gui.Enabled = true
+		end
+	end)
 	
 	
 	
@@ -236,4 +257,4 @@ local function LMWBAMX_fake_script() -- ScreenGui.LocalScript
 	frame.Draggable = true
 	frame.Active = true
 end
-coroutine.wrap(LMWBAMX_fake_script)()
+coroutine.wrap(DOKKI_fake_script)()
