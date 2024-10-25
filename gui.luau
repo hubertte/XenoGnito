@@ -1,6 +1,5 @@
 
 
-
 -- Instances
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -22,6 +21,7 @@ local TextButton = Instance.new("TextButton")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.new(0.313726, 0.313726, 0.313726)
@@ -183,7 +183,7 @@ TextButton.TextWrapped = true
 
 -- Scripts
 
-local function OQML_fake_script() -- TextButton.LocalScript 
+local function QHCMC_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local gui = script.Parent.Parent
@@ -196,6 +196,8 @@ local function OQML_fake_script() -- TextButton.LocalScript
 	local label1 = frame.Tit
 	local label2 = frame.Scrip
 	local execbut = frame.exec
+	local scriptbut = frame.hub
+	local p00esp = frame.esp
 	
 	
 	lilman.Visible = false
@@ -206,6 +208,8 @@ local function OQML_fake_script() -- TextButton.LocalScript
 	label1.Visible = false
 	label2.Visible = false
 	execbut.Visible = false
+	scriptbut.Visible = false
+	p00esp.Visible = false
 	
 	
 	local function idk()
@@ -238,6 +242,9 @@ local function OQML_fake_script() -- TextButton.LocalScript
 		label1.Visible = true
 		label2.Visible = true
 		execbut.Visible = true
+		scriptbut.Visible = false
+		p00esp.Visible = false
+		
 	
 	
 	
@@ -252,8 +259,8 @@ local function OQML_fake_script() -- TextButton.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(idk)
 end
-coroutine.wrap(OQML_fake_script)()
-local function JSOH_fake_script() -- ScreenGui.LocalScript 
+coroutine.wrap(QHCMC_fake_script)()
+local function QWOAWX_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -387,4 +394,4 @@ local function JSOH_fake_script() -- ScreenGui.LocalScript
 	p00esp.Visible = true
 	
 end
-coroutine.wrap(JSOH_fake_script)()
+coroutine.wrap(QWOAWX_fake_script)()
