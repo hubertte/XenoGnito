@@ -34,13 +34,23 @@ asciiart = """
 
 
 """
+
+
+
+
+
+
+
+
+import urllib.request
+
+url = "https://raw.githubusercontent.com/hubertte/XenoGnito/refs/heads/main/gui.luau"
+
+
 def idk():
-    response = requests.get("https://raw.githubusercontent.com/hubertte/XenoGnito/refs/heads/main/gui.luau")
-    lua_script = response.text
-    execute_utf(lua_script)
-
-
-
+    with urllib.request.urlopen(url) as response:
+     lua_script = response.read().decode('utf-8')  # Decode the bytes to string
+     execute_utf(lua_script)
     
 async def compilebricks():
     if is_process_running("RobloxPlayerBeta.exe"):
@@ -71,4 +81,3 @@ async def compilebricks():
     else:
         error("Roblox Not Open.")
         await keep()
-
