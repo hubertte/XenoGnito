@@ -14,6 +14,7 @@ local Infyeld = Instance.new("TextButton")
 local Lilman = Instance.new("Frame")
 local exec = Instance.new("TextButton")
 local Clear = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
 
 --Properties:
 
@@ -137,9 +138,23 @@ Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
 Clear.TextSize = 20.000
 Clear.TextWrapped = true
 
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(26, 255, 0)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0199659616, 0, 0.838599801, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Visible = false
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Open Xenognito"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
 -- Scripts:
 
-local function DOKKI_fake_script() -- ScreenGui.LocalScript 
+local function VSGZR_fake_script() -- ScreenGui.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
@@ -202,6 +217,8 @@ local function DOKKI_fake_script() -- ScreenGui.LocalScript
 	end
 	
 	local function exits()
+		frame.Draggable = false
+		frame.Active = false
 		lilman.Visible = false
 		execbox.Visible = false
 		clear.Visible = false
@@ -218,24 +235,19 @@ local function DOKKI_fake_script() -- ScreenGui.LocalScript
 			false
 		)
 		task.wait(0.8)
-		gui.Enabled = false
+		frame.Visible = false
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "[Xenogntio]",
-			Text = "Press leftshift to open the exploit.",
+			Text = "Press the button to open again.",
 			Icon = "http://www.roblox.com/asset/?id=14775591947",
 			Duration = 5
 		})
+		gui.TextButton.Visible = true
 	end
 	
 	
 	
-	local UserInputService = game:GetService("UserInputService")
 	
-	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-		if input.KeyCode == Enum.KeyCode.LeftShift and not gameProcessedEvent then
-			gui.Enabled = true
-		end
-	end)
 	
 	
 	
@@ -257,4 +269,73 @@ local function DOKKI_fake_script() -- ScreenGui.LocalScript
 	frame.Draggable = true
 	frame.Active = true
 end
-coroutine.wrap(DOKKI_fake_script)()
+coroutine.wrap(VSGZR_fake_script)()
+local function IIGYB_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local gui = script.Parent.Parent
+	local frame = gui.Frame
+	local lilman = frame.Lilman
+	local execbox = frame.TextBox
+	local clear = frame.Clear
+	local exit = frame.exit
+	local infyel = frame.Infyeld
+	local label1 = frame.Tit
+	local label2 = frame.Scrip
+	local execbut = frame.exec
+	
+	
+	lilman.Visible = false
+	execbox.Visible = false
+	clear.Visible = false
+	exit.Visible = false
+	infyel.Visible = false
+	label1.Visible = false
+	label2.Visible = false
+	execbut.Visible = false
+	
+	
+	local function idk()
+		script.Parent.Visible = false
+		frame.Visible = true
+		
+		frame:TweenSize(
+			UDim2.new(0, 553, 0, 267),
+			"In",
+			"Quad",
+			0.8,
+			false
+		)
+	
+	
+	
+	
+	
+		task.wait(0.8)
+		
+		frame.Draggable = true
+		frame.Active = true
+		
+		lilman.Visible = true
+		execbox.Visible = true
+		clear.Visible = true
+		exit.Visible = true
+		infyel.Visible = true
+		label1.Visible = true
+		label2.Visible = true
+		execbut.Visible = true
+	
+	
+	
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "[Xenogntio]",
+			Text = "Loaded",
+			Icon = "http://www.roblox.com/asset/?id=14775591947",
+			Duration = 5
+		})
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(idk)
+end
+coroutine.wrap(IIGYB_fake_script)()
