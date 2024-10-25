@@ -5,11 +5,15 @@
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
+local Tit = Instance.new("TextLabel")
+local exit = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
-local TextLabel = Instance.new("TextLabel")
-local yeld = Instance.new("TextButton")
-local Exec = Instance.new("TextButton")
-local clear = Instance.new("TextButton")
+local Scrip = Instance.new("TextLabel")
+local Infyeld = Instance.new("TextButton")
+local Lilman = Instance.new("Frame")
+local exec = Instance.new("TextButton")
+local Clear = Instance.new("TextButton")
 
 --Properties:
 
@@ -20,105 +24,216 @@ Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.254264057, 0, 0.11938443, 0)
-Frame.Size = UDim2.new(0, 520, 0, 310)
+Frame.Position = UDim2.new(0.241792858, 0, 0.241769522, 0)
+Frame.Size = UDim2.new(0, 30, 0, 31)
+
+Tit.Name = "Tit"
+Tit.Parent = Frame
+Tit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tit.BackgroundTransparency = 1.000
+Tit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tit.BorderSizePixel = 0
+Tit.Size = UDim2.new(0, 162, 0, 41)
+Tit.Visible = false
+Tit.Font = Enum.Font.Unknown
+Tit.Text = "Xenognito Beta."
+Tit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tit.TextSize = 14.000
+
+exit.Name = "exit"
+exit.Parent = Frame
+exit.BackgroundColor3 = Color3.fromRGB(255, 47, 50)
+exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.929475605, 0, 0.018726591, 0)
+exit.Size = UDim2.new(0, 31, 0, 30)
+exit.Visible = false
+exit.Font = Enum.Font.SourceSans
+exit.Text = ""
+exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+exit.TextSize = 14.000
+
+UICorner.CornerRadius = UDim.new(10, 6)
+UICorner.Parent = exit
 
 TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.fromRGB(116, 50, 98)
+TextBox.BackgroundColor3 = Color3.fromRGB(98, 98, 98)
 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.22115384, 0, 0, 0)
-TextBox.Size = UDim2.new(0, 405, 0, 223)
+TextBox.Position = UDim2.new(0.303797454, 0, 0.153558046, 0)
+TextBox.Size = UDim2.new(0, 385, 0, 181)
+TextBox.Visible = false
+TextBox.ClearTextOnFocus = false
 TextBox.Font = Enum.Font.SourceSans
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(20, 255, 75)
-TextBox.TextSize = 20.000
+TextBox.Text = "XENOGNITO - https://discord.gg/r79APpN9y4"
+TextBox.TextColor3 = Color3.fromRGB(255, 228, 228)
+TextBox.TextSize = 17.000
 TextBox.TextWrapped = true
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(-0.00183058518, 0, -0.0031962241, 0)
-TextLabel.Size = UDim2.new(0, 115, 0, 49)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Scripts"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 14.000
+Scrip.Name = "Scrip"
+Scrip.Parent = Frame
+Scrip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scrip.BackgroundTransparency = 1.000
+Scrip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scrip.BorderSizePixel = 0
+Scrip.Position = UDim2.new(0, 0, 0.209737822, 0)
+Scrip.Size = UDim2.new(0, 162, 0, 41)
+Scrip.Visible = false
+Scrip.Font = Enum.Font.Unknown
+Scrip.Text = "Scripts."
+Scrip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Scrip.TextSize = 14.000
 
-yeld.Name = "yeld"
-yeld.Parent = Frame
-yeld.BackgroundColor3 = Color3.fromRGB(172, 255, 252)
-yeld.BorderColor3 = Color3.fromRGB(0, 0, 0)
-yeld.BorderSizePixel = 0
-yeld.Position = UDim2.new(0, 0, 0.154838711, 0)
-yeld.Size = UDim2.new(0, 114, 0, 50)
-yeld.Font = Enum.Font.SourceSans
-yeld.Text = "Inf yeld"
-yeld.TextColor3 = Color3.fromRGB(0, 0, 0)
-yeld.TextSize = 14.000
+Infyeld.Name = "Infyeld"
+Infyeld.Parent = Frame
+Infyeld.BackgroundColor3 = Color3.fromRGB(107, 99, 101)
+Infyeld.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Infyeld.BorderSizePixel = 0
+Infyeld.Position = UDim2.new(0.00904159155, 0, 0.363295883, 0)
+Infyeld.Size = UDim2.new(0, 152, 0, 40)
+Infyeld.Visible = false
+Infyeld.Font = Enum.Font.SourceSansBold
+Infyeld.Text = "Infinite Yeld"
+Infyeld.TextColor3 = Color3.fromRGB(255, 255, 255)
+Infyeld.TextSize = 20.000
+Infyeld.TextWrapped = true
 
-Exec.Name = "Exec"
-Exec.Parent = Frame
-Exec.BackgroundColor3 = Color3.fromRGB(172, 255, 252)
-Exec.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Exec.BorderSizePixel = 0
-Exec.Position = UDim2.new(0.253846169, 0, 0.851612926, 0)
-Exec.Size = UDim2.new(0, 106, 0, 37)
-Exec.Font = Enum.Font.SourceSans
-Exec.Text = "execute"
-Exec.TextColor3 = Color3.fromRGB(0, 0, 0)
-Exec.TextSize = 14.000
+Lilman.Name = "Lilman"
+Lilman.Parent = Frame
+Lilman.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lilman.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Lilman.BorderSizePixel = 0
+Lilman.Position = UDim2.new(0.00904159155, 0, 0.546816468, 0)
+Lilman.Size = UDim2.new(0, 152, 0, 5)
+Lilman.Visible = false
 
-clear.Name = "clear"
-clear.Parent = Frame
-clear.BackgroundColor3 = Color3.fromRGB(172, 255, 252)
-clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
-clear.BorderSizePixel = 0
-clear.Position = UDim2.new(0.52692306, 0, 0.851612926, 0)
-clear.Size = UDim2.new(0, 106, 0, 37)
-clear.Font = Enum.Font.SourceSans
-clear.Text = "clear"
-clear.TextColor3 = Color3.fromRGB(0, 0, 0)
-clear.TextSize = 14.000
+exec.Name = "exec"
+exec.Parent = Frame
+exec.BackgroundColor3 = Color3.fromRGB(107, 99, 101)
+exec.BorderColor3 = Color3.fromRGB(0, 0, 0)
+exec.BorderSizePixel = 0
+exec.Position = UDim2.new(0.00904159155, 0, 0.60299623, 0)
+exec.Size = UDim2.new(0, 152, 0, 28)
+exec.Visible = false
+exec.Font = Enum.Font.SourceSansBold
+exec.Text = "Execute"
+exec.TextColor3 = Color3.fromRGB(255, 255, 255)
+exec.TextSize = 20.000
+exec.TextWrapped = true
+
+Clear.Name = "Clear"
+Clear.Parent = Frame
+Clear.BackgroundColor3 = Color3.fromRGB(107, 99, 101)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.00904159155, 0, 0.752808988, 0)
+Clear.Size = UDim2.new(0, 152, 0, 28)
+Clear.Visible = false
+Clear.Font = Enum.Font.SourceSansBold
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextSize = 20.000
+Clear.TextWrapped = true
 
 -- Scripts:
 
-local function KAEAVT_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
+local function LMWBAMX_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
 
 	local gui = script.Parent
-	local yeld = gui:WaitForChild("yeld")
-	local editor = gui:WaitForChild("TextBox")
-	local exec = gui:WaitForChild("Exec")
-	local clear = gui:WaitForChild("clear")
+	local frame = gui.Frame
+	local lilman = frame.Lilman
+	local execbox = frame.TextBox
+	local clear = frame.Clear
+	local exit = frame.exit
+	local infyel = frame.Infyeld
+	local label1 = frame.Tit
+	local label2 = frame.Scrip
+	local execbut = frame.exec
 	
 	
-	gui.Active = true
-	gui.Draggable = true
+	lilman.Visible = false
+	execbox.Visible = false
+	clear.Visible = false
+	exit.Visible = false
+	infyel.Visible = false
+	label1.Visible = false
+	label2.Visible = false
+	execbut.Visible = false
 	
 	
-	local function yeldy()
+	frame:TweenSize(
+		UDim2.new(0, 553, 0, 267),
+		"In",
+		"Quad",
+		0.8,
+		false
+	)
+	
+	
+	
+	
+	
+	task.wait(0.8)
+	
+	
+	
+	
+	
+	
+	
+	local function exec()
+		loadstring(execbox.Text)()
+	end
+	
+	local function yeld()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end
 	
-	local function exe()
-		loadstring(editor.Text)()
+	local function cleard()
+		execbox.Text = ""
+	end
+	
+	local function exits()
+		lilman.Visible = false
+		execbox.Visible = false
+		clear.Visible = false
+		exit.Visible = false
+		infyel.Visible = false
+		label1.Visible = false
+		label2.Visible = false
+		execbut.Visible = false
+		frame:TweenSize(
+			UDim2.new(0, 0,0, 0),
+			"In",
+			"Quad",
+			0.8,
+			false
+		)
+		task.wait(0.8)
+		gui:Destroy()
 	end
 	
 	
-	local function clearr()
-		editor.Text = ""
-	end
+	
+	lilman.Visible = true
+	execbox.Visible = true
+	clear.Visible = true
+	exit.Visible = true
+	infyel.Visible = true
+	label1.Visible = true
+	label2.Visible = true
+	execbut.Visible = true
 	
 	
+	execbut.MouseButton1Click:Connect(exec)
+	clear.MouseButton1Click:Connect(cleard)
+	infyel.MouseButton1Click:Connect(yeld)
+	exit.MouseButton1Click:Connect(exits)
 	
-	clear.MouseButton1Click:Connect(clearr)
-	exec.MouseButton1Click:Connect(exe)
-	yeld.MouseButton1Click:Connect(yeldy)
+	frame.Draggable = true
+	frame.Active = true
 end
-coroutine.wrap(KAEAVT_fake_script)()
-
+coroutine.wrap(LMWBAMX_fake_script)()
